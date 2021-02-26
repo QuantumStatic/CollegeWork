@@ -1,0 +1,91 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+* {
+  font-family: 'Slabo 27px', serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #DFBBB1;
+}
+
+header {
+  /* margin: 0 auto; */
+
+  height: 80px;
+  padding: 8px;
+  background-color: #F56476;
+  border-radius: 0 0 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 8px;
+  width: 99%;
+  z-index: 1;
+}
+  .logo {
+    /* display: inline-block; */
+    width: 360px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+  }
+  .logo > a > img {
+    float: left;
+    margin: 0;
+    height: 70px;
+    width: auto;
+  }
+  .logo >a > h1 {
+    margin: 0;
+    font-size: 40px;
+    width: 360px;
+    line-height: 70px;
+    /* display: inline-block; */
+    font-family: 'Lobster', cursive;
+    /* padding: 0; */
+  }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu-item > img, .ordered, .info, #promotion, .reservation, .order_button {
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+.menu-item > img, input[type="text"], input[type="submit"] {
+  animation-name: fadein;
+  animation-duration: 2s;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+footer {
+  clear: both;
+  margin: 0 auto;
+  background-color: #E43F6F;
+  width: 100%;
+  padding: 0px;
+}
+
+footer > p {
+  margin: 0 auto;
+  width: 37%;
+  font-size: 12px;
+}
+
+footer>p>a {
+  text-decoration: underline;
+}

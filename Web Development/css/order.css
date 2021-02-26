@@ -1,0 +1,167 @@
+@keyframes drop {
+  from {
+    height: 0;
+  }
+  to {
+    /* height: 100%; */
+  }
+}
+
+/* MENU */
+.menu {
+  display: inline-block;
+  float: left;
+  text-align: center;
+
+  width: 65%;
+  margin: 7% 2% 10px 1%;
+  padding: 10px;
+
+  background-color: #BE3E82;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+h3 {
+  border: 1px solid black;
+  border-bottom: 0;
+  display: inline-block;
+  width: 32%;
+  margin: auto;
+  background-color: lightgrey;
+  border-radius: 165px 165px 0 0;
+  box-shadow: 0 2px;
+  /* padding: 10px; */
+}
+
+div.menu-section {
+  border: 1px solid black;
+  width: 96.5%;
+  height: 150px;
+  display: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #5E4352;
+}
+
+  div.menu-section.sushi {
+    height: 300px;
+  }
+
+  .menu-item {
+    /* border: 1px solid black; */
+    background-color: #DFBBB1;
+
+    display: inline-block;
+    text-align: left;
+    float: left;
+
+    width: 32%;
+    height: 99%;
+    margin: 3px 5px 2px;
+    padding: 5px;
+  }
+
+.menu-item.sushi {
+      height: 50%;
+}
+
+  img {
+    height: 99%;
+    width: auto;
+    float: left;
+  }
+
+input[type="number"], input[type="button"] {
+    text-align: center;
+    display: inline-block;
+    width: 55px;
+  }
+
+.sushi > input[type="button"], .sushi > input[type="number"]
+{
+  margin-left: 10px;
+}
+.sushi > input[type="number"]{
+  margin-top: 12%;
+}
+.drink > input[type="button"], .drink > input[type="number"]{
+  margin-left: 15%;
+}
+.drink > input[type="number"]{
+  margin-top: 12%;
+}
+.dessert > input[type="button"], .dessert > input[type="number"]{
+  margin-left: 10px;
+}
+.dessert > input[type="number"]{
+  margin-top: 12%;
+}
+
+/* TABLE */
+.ordered {
+  margin: 7% auto 10px ;
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+  background-color: #BE3E82;
+}
+  .ordered table {
+    width: 200px;
+    margin: auto;
+  }
+  .ordered table, th, td {
+    border: 2px solid black;
+  }
+  .ordered tbody {
+    background-color: lightgrey
+  }
+  .ordered thead, tfoot {
+    background-color: grey;
+  }
+  .desc {
+    text-align: left;
+  }
+  tfoot, .qty, #total_quantity {
+    text-align: right;
+  }
+/*  */
+
+/* PRINT MEDIA */
+@media print {
+
+  .menu, footer {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+    left: 0;
+    width: 30%;
+    height: 50px;
+    position: relative;
+    margin: auto;
+  }
+    .logo {
+      width: 290px;
+      margin: 0 auto;
+    }
+    .logo > a >img
+    {
+      height: 50px;
+      width: auto;
+    }
+
+    .ordered
+    {
+      display: block;
+      margin: 0 auto;
+    }
+  table{
+    width: 60%;
+  }
+}

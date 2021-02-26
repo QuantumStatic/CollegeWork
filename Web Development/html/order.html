@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/order.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../js/order.js"></script>
+    <script type="text/javascript" src="https://courses.cs.cityu.edu.hk/cs2204/cs2204cw3.js"></script>
+
+    <title>Order</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="home.html">
+          <img src="../images/Sushi-64.png" alt="Sushi Logo">
+          <h1>CITY SUSHI</h1>
+         </a>
+        </div>
+    </header>
+
+    <div class="menu">
+      <h2>Menu</h2>
+
+      <h3 class="menu-section sushi">Sushi</h3>
+      <h3 class="menu-section drink">Drinks</h3>
+      <h3 class="menu-section dessert">Dessert</h3>
+
+      <!-- Sushi Items -->
+      <div class="menu-section sushi">
+          <div class="menu-item sushi">
+            <img src="../images/sushi-1.jpg" alt="Sushi 1">
+            <input type="number" min="1" name="qty" value="1">
+            <input type="button" name="submit" value="Add">
+          </div>
+
+          <div class="menu-item sushi">
+            <img src="../images/sushi-2.jpg" alt="Sushi 2">
+            <input type="number" min="1" name="qty" value="1">
+            <input type="button" name="submit" value="Add">
+          </div>
+
+          <div class="menu-item sushi">
+            <img src="../images/sushi-3.jpg" alt="Sushi 3">
+            <input type="number" min="1" name="qty" value="1">
+            <input type="button" name="submit" value="Add">
+          </div>
+
+          <div class="menu-item sushi">
+            <img src="../images/sushi-4.jpg" alt="Sushi 4">
+            <input type="number" min="1" name="qty" value="1">
+            <input type="button" name="submit" value="Add">
+          </div>
+       </div>
+
+      <!-- Drink Items -->
+      <div class="menu-section drink">
+        <div class="menu-item drink">
+          <img src="../images/drink-1.jpg" alt="Drink 1">
+          <input type="number" min="1" name="qty" value="1">
+          <input type="button" name="submit" value="Add">
+        </div>
+
+        <div class="menu-item drink">
+          <img src="../images/drink-2.jpg" alt="Drink 2">
+          <input type="number" min="1" name="qty" value="1">
+          <input type="button" name="submit" value="Add">
+        </div>
+
+        <div class="menu-item drink">
+          <img src="../images/drink-3.jpg" alt="Drink 3">
+          <input type="number" min="1" name="qty" value="1">
+          <input type="button" name="submit" value="Add">
+        </div>
+
+      </div>
+
+      <!-- Dessert Items -->
+      <div class="menu-section dessert">
+        <div class="menu-item dessert">
+          <img src="../images/dessert-1.jpg" alt="Dessert 1">
+          <input type="number" min="1" name="qty" value="1">
+          <input type="button" name="submit" value="Add">
+        </div>
+      </div>
+     </div>
+
+    <div class="ordered">
+      <h2>Ordered Items</h2>
+      <p>14 Mar 2017 15:59</p>
+
+      <table>
+        <caption>
+          Table:4 - No. of Guests: 3
+        </caption>
+        <thead>
+          <tr>
+          <th class="desc">Description</th>
+          <th class="qty">Qty</th>
+        </tr>
+        </thead>
+        <tbody> <!-- Not Required -->
+        </tbody>
+        <tfoot>
+          <tr>
+          <td id="total">Total</td>
+          <td id="total_quantity">9</td>
+        </tr>
+        </tfoot>
+      </table>
+      <a href="#" onclick="undo()">
+        <p>Undo</p>
+      </a>
+    </div>
+    <footer>
+      <p>
+        &copy; CityU 2019 sources of image and text from Wikimedia Commons and Courtesy of <a href="https://icons8.com/">Icon pack by Icons8</a>; designed by <a href="design.html">CS2204</a>
+      </p>
+    </footer>
+  </body>
+</html>

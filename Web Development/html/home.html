@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Landing/Home Page -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="https://courses.cs.cityu.edu.hk/cs2204/cs2204cw3.js"></script>
+    <script type="text/javascript">
+
+      function checkForm() {
+        if (!checkFormEmpty()) {
+          var valueofDate = document.querySelector('input[name="date"]').value;
+          var timeMenu = document.getElementsByName('time')[0];
+          var valueofTime = timeMenu.options[timeMenu.selectedIndex].value;
+          var valueofGuestno = document.querySelector('input[name="guestno"]').value;
+
+
+          if (reserve(valueofDate, valueofTime, valueofGuestno)) {
+            // alert('Reservation done. Thank you.');
+            document.querySelector('#msg-1').style.display = 'block';
+            document.querySelector('#msg-2').style.display = 'none';
+          }
+          else {
+            // alert('No table is available for the date and time');
+            document.querySelector('#msg-1').style.display = 'none';
+            document.querySelector('#msg-2').style.display = 'block';
+          }
+        }
+      }
+    </script>
+
+    <title>City Sushi</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+           <a href="home.html">
+          <img src="../images/Sushi-64.png" alt="Sushi Logo">
+          <h1>CITY SUSHI</h1>
+          </a>  </div>
+    </header>
+
+    <!-- Restaurant Info -->
+    <div class="info">
+      <dl>
+        <div class="address">
+          <dt>Address</dt>
+          <dd>
+            83 Tat Chee Avenue<br>
+            Kowloon<br>
+            Hong Kong<br>
+          </dd>
+        </div>
+        <div class="tel">
+          <dt>Tel</dt>
+          <dd>
+            3442-7788
+          </dd>
+        </div>
+        <div class="hours">
+          <dt>Business Hours</dt>
+          <dd>
+            <ul>
+              <li>12:00-3:00pm</li>
+              <li>6:30-11:30pm</li>
+            </ul>
+            <p>
+              Last Order 10:30pm
+            </p>
+          </dd>
+        </div>
+        <div class="loc">
+          <dt>Location</dt>
+          <dd>
+            <img src="../images/location.jpg" alt="City Sushi's Location on Map" class="loc"><br>
+          </dd> </div>
+        <div class="dishes">
+          <dt>Signature Dishes</dt>
+          <dd>
+            <ul id="items">
+              <li> <span class="item">Foie gras</span> with mustard seeds and green onions;</li>
+              <li> <span class="item">Bisque</span> - a smooth and creamy, French potage;</li>
+              <li> <span class="item">Croque Monsieur</span> - baked or fried boiled ham and cheese sandwich</li>
+          </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Promotion, video with backup link -->
+    <div id="promotion">
+      <h2>LUNCH TIME SPECIAL OFFER:</h2>
+      <h3>$188 SUSHI SET, 12 PIECES</h3>
+      <video autoplay muted onended="vidSwitch()">
+        <source src="https://courses.cs.cityu.edu.hk/cs2204/barbecue.mp4" type="video/mp4">
+        <source src="https://courses.cs.cityu.edu.hk/cs2204/barbecue.ogg" type="video/ogg">
+        ERROR:This video is unsupported.
+      </video>
+    </div>
+
+    <!-- Order Button -->
+    <div class="order_button">
+      <a href="order.html"><img src="../images/button.png" alt="Order Button" class="order_button"></a>
+    </div>
+    <!-- Reservation Form -->
+    <div class="reservation">
+      <form class="reserve" action="#" method="post">
+        <fieldset>
+          <legend>
+            Reservation
+          </legend>
+          <label>
+            Date:
+          </label>
+          <input type="date" name="date"><br>
+          <label>
+            Time:
+          </label>
+          <select name='time'>
+            <option value="1">12:00-2:00pm</option>
+            <option value="2">2:00-3:00pm</option>
+            <option value="3">6:30-8:30pm</option>
+            <option value="4">8:30-10:00pm</option>
+          </select>
+          <br>
+          <label>
+            No. of Guests:
+          </label>
+          <input type="number" name="guestno" min="1" value="1">
+          <br>
+          <h5 id='Err'>ERROR: Data incomplete, please re-enter.</h5>
+          <h5 id='msg-1'>Reservation done. Thank You.</h5>
+          <h5 id='msg-2'>No table is available for the data and time.</h5>
+          <input type="button" name="avail" value="Check Availability" onclick="checkForm()">
+          <input type="reset" name="reset" value="Reset" onclick="clearError()">
+        </fieldset>
+      </form>
+    </div>
+    <footer>
+      <p>
+        &copy; CityU 2019 sources of image and text from Wikimedia Commons and Courtesy of <a href="https://icons8.com/">Icon pack by Icons8</a>; designed by <a href="design.html">CS2204</a>
+      </p>
+    </footer>
+  </body>
+</html>
