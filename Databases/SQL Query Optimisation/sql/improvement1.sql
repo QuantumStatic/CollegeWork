@@ -1,0 +1,2 @@
+ALTER TABLE `olist_customers_dataset` ADD INDEX `olist_dataset_idx_customer_id` (`customer_unique_id`);
+ALTER TABLE `olist_orders_dataset` ADD INDEX `olist_dataset_idx_customer_id_order_timestamp` (`customer_id`,`order_purchase_timestamp`);
