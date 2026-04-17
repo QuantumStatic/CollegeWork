@@ -1,0 +1,119 @@
+What sets this project apart is that they are 3 distinct crawlers build with 3 distinct schools of thought.
+
+First Crawler [Ambitious]
+
+    - Most of the research papers out there consider the web to be a graph but do not try to extract meaningful information from the nodes of the graph itself.
+    - This crawler is designed to extract meaningful information from the nodes of the graph itself.
+    -If there was a sample with 1000 records, sampled in the most non-biased way possible from across the billions of pages on the internet
+    the one that might be common in all the 1000 records would be that all 1000 links would not have anything in common
+    - This implies that this sample should have a high dissimilarity between the links in the sample
+    - Crawler jumps to page and analyses all links to find the most dissimilar external links to the current page
+    - Then these external links might be dissimilar to the current page but might be similar to each other, hence
+    we filter out links that are similar to each other and only keep the most dissimilar links
+    - Then if we have dissimilar links they might be similar to our enteries in the sample, hence we filter out links that are similar to our sample
+    - We repeat this process until we have a sample of 1000 records
+
+    - As expected, this crawler is extremely compute heavy. 
+    - The entire crawler was designed with multiprocessing in mind and hence is bearable
+    - The crawler is also designed to be extremely modular and hence can be easily scaled to a high core machine
+
+Second Crawler [Traditional]
+
+    - As the name suggests, this crawler treats the web like a graph and nothing more.
+    - It is designed to crawl in a mixed manner between BFS and DFS
+    - Intutively, this crawler decides to jump to the node that produces the least score s. 
+
+    - s for a link k at current page c varies as follows with domain_name_percentile(k) + age(k) + penalty(k) - new_external_links(k)
+        -- domain_name_percentile(k) is the percentile of the # of links found of a particular domain wrt to # of links of all the domains found
+        -- age(k) is the age of the link k, with every iteration the age of the link increases by 1
+        -- penalty(k) is the penalty for a link k, if the link on the page is an internal link a penalty is imposed temporaily on this link
+        -- Since k is in queue and when k will have a different domain than c, the penalty won't be imposed
+        -- new_external_links(k) is the # of new external links we haven't explored so far on the web
+
+    - this crawler samples the page a page k with probability p
+    - p for a link k varies as follows with domain_name_percentile(k) - domain_count_in_sample(x) - penalty(k) - bad_luck(k)
+        -- domain_name_percentile(k) is the percentile of the # of links found of a particular domain wrt to # of links of all the domains found
+        There is a moderate bump for links from uncommon domains or penalty for links that from common domain
+        -- domain_count_in_sample(x) is the # of links from the domain of k in the sample, eventually after a threshold we don't want to sample from the same domain
+        so it keeps on reducing probability proportional to the # of links from the domain in the sample
+        -- penalty(k) is a penalty on a link k for having too many link (based on percentile of links found per page so far) or too less links. There is also a moderate penalty if the previous link was sampled.
+        -- bad_luck(k) is a plain coin toss if a link gets addtional penalty or not. [was later removed on suggestion]
+
+    - This crawler is not really compute heavy however it is inefficeint
+    - Originally, if a page had 1000 links, it would have to calculate the score for all 1000 links but crawling all of them.
+    This meant that, way too many links are being crawled to determine the next step and sampling probability. However, the while 
+    testing it looks as if the crawler really is going in a non biased manner and is not biased towards any particular domain
+    - Sampling seems ideal as well
+    - But to do this for thousands of links requires a lot more compute power and time
+
+both of the above menioned crawlers use multiprocessing to speed up the process
+
+Third Crawler [Practical for assignment]
+
+    - After spending counteless hours on the first two crawlers, I decided to build a crawler that is practical for the assignment
+    - This crawler is fast but doesn't produce samples or jumps as well as the previous two crawlers 
+
+    - This crawler first decides if it wants to sample the current page or not and then decides which page to jump to
+
+    - Sampling probability p for a link k is calculated as follows
+    - p = domain_name_percentile(k) - domain_count_in_sample(x) - continuous_sampling_penalty(k) - standard_penalty(k) - bad_luck(k)
+        -- domain_name_percentile(k) is the percentile of the # of links found of a particular domain wrt to # of links of all the domains found
+        -- domain_count_in_sample(x) is the # of links from the domain of k in the sample, eventually after a threshold we don't want to sample from the same domain
+        -- continuous_sampling_penalty(k) is a penalty imposed if links are getting sampled too frequently. 
+        -- standard_penalty(k) is a penalty imposed if the previous link was sampled. or for having too many links or too few links.
+        -- bad_luck(k) is a plain coin toss if a link gets addtional penalty or not. [later removed on suggestion]
+
+    - Jumping probability p for a link k from a node c is calculated as follows at node n
+
+    - p = domain_name_percentile(k) + age(k) + penalty(k)
+        -- domain_name_percentile(k) is the percentile of the # of links found of a particular domain wrt to # of links of all the domains found
+        -- age(k) is the age of the link k, with every iteration the age of the link increases by 1
+        -- penalty(k) is the penalty for a link k, if the link on the page is an internal link a penalty is imposed temporaily on this link
+        -- Since k is in queue and when k will have a different domain than current page, the penalty won't be imposed
+        -- we no longer look for links on k to speed up the process
+        -- If c has more than 150 links we sample 150 links with higher probability to links that lead to other domain. Longer links are penalised
+        -- Moreover, if the queue gets too long (>= 6000) we randomly sample 4500 links from the queue and continue
+
+    - This crawler is designed to be extremely fast and hence is not compute heavy
+    - It works on a single core and hence is not designed to be scaled, however its faster than other 2
+    since we have reduced fetching links
+    - However the sample quality seems to be random and not as good as the other two crawlers
+    - Finding next spot to jump to is also not as good as the other two crawlers but acceptable under the constraints.
+
+General Comments 
+ - multiprocessing has been used wherever possible to save time.
+ - many optimisations have been made to optimise space usage, using yield instead of return, using __slots__ to create Link objects.
+ - Lazy evaluation of map & filter objects has been put to full use to save time and space
+ - Uses a pity system, where if links are getting rejected too frequently, we take pity and sample once in a while
+ - Code could have had a better design if I create a base crawler object and then used inheritance
+
+I have included 3 crawl samples namely, small, medium & large, following is their language distribution:
+
+Large Crawl (Total Crawled: 14936)
+'English': 899 (47.59%)
+'Other Languages': 886 (46.90%)
+'Chinese': 58 (3.07%)
+'Spanish': 38 (2.01%)
+'Not Found': 5 (0.26%)
+'Polish': 3 (0.16%)
+Total Sampled: 1889
+
+Medium Crawl (Total Crawled: 10689)
+'English': 596 (52.51 %)
+'Other Languages': 464 (40.88 %)
+'Chinese': 34 (3.00%)
+'Not found': 20 (1.76%)
+'Spanish': 16 (1.41%)
+'Polish': 5 (0.44%)
+Total Sampled: 1135
+
+Small Crawl (Total Crawled: 6774)
+'English': 743 (74.3 %)
+'Other Languages': 209 (20.9 %)
+'Chinese': 29 (2.9%)
+'Polish': 12 (1.2%)
+'Spanish': 6 (0.6%)
+'not found': 1 (0.1%)
+Total Sampled: 1000
+
+
