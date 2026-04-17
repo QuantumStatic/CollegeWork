@@ -1,0 +1,174 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: #0056b3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background-color: #003d82;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: inherit;
+    /* Space between description, image, and more info */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    /* Ensures it stretches properly */
+    max-width: 400px;
+    /* Prevents it from being too wide */
+    margin: 0 auto;
+    
+    /* Center align the container */
+}
+
+/* Header */
+.items-header {
+    margin-top: 80px;
+    /* Add space to accommodate fixed navigation bar */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+/* Items List */
+.items-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Item Card */
+.item-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    /* Ensure consistent spacing between card elements */
+    gap: 10px;
+}
+
+.item-description {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+} /* Space between image and description */
+
+
+/* Item Image */
+.item-image-categories img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    max-height: 200px;
+    align-self: center;
+    /* Prevents overly large images */
+    /* Space below the image */
+}
+
+.more-info {
+    margin-top: 10px;
+}
+
+.more-info-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.more-info-link:hover {
+    text-decoration: underline;
+}
+
+/* Add to Cart */
+.add-to-cart-container {
+    margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+}

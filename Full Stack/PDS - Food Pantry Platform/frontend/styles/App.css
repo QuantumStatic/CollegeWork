@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* App Container */
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px; /* Add space below the message */
+}
+
+
+
+/* Centered Layout */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    text-align: center;
+}
+
+.home-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Logged-In Layout */
+.logged-in-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Top Bar for Logged-In Layout */
+.top-bar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Logout Container */
+.logout-container {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logout-button {
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #003f8a;
+}
+
+.top-bar .welcome-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.menu {
+    display: grid;
+    /* Use grid layout for better control */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 20px;
+    /* Add space between items */
+    max-width: 60vw;
+    /* Limit the width of the container */
+    margin: 0 auto;
+    /* Center the menu */
+}
+.menu a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #0056b3;
+}
+
+.menu-item {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+    /* Ensure the items are blocks for consistent sizing */
+}
+
+.menu-item:hover {
+    background-color: #e6f0ff;
+    color: #0056b3;
+}

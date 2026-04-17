@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "ab21dc37-8364-46d9-bbae-91d8c9b69b3b",
+		"name": "PDS Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31389615"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "meetoswal",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "[\"914-240-9100\", \"852-914-3461\"]",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "Client",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "meet@example.com",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "Oswal",
+							"type": "text"
+						},
+						{
+							"key": "fname",
+							"value": "Meet",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "meetoswal",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getItem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/getitem/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getitem",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/order/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDonation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "donor",
+							"value": "meetoswal",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/oswme/Pictures/Screenshots/Screenshot 2024-11-16 160724.png"
+						},
+						{
+							"key": "iDescription",
+							"value": "Chair",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "Black",
+							"type": "text"
+						},
+						{
+							"key": "isNew",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "hasPieces",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "Wood",
+							"type": "text"
+						},
+						{
+							"key": "mainCategory",
+							"value": "Furniture",
+							"type": "text"
+						},
+						{
+							"key": "subCategory",
+							"value": "Chair",
+							"type": "text"
+						},
+						{
+							"key": "donateDate",
+							"value": "2024-11-16",
+							"type": "text"
+						},
+						{
+							"key": "pieces",
+							"value": "[\n    {\n        \"pieceNum\" : \"1\",\n        \"pDescription\" : \"Chair\",\n        \"length\" : \"5\",\n        \"width\" : \"5\", \n        \"height\" : \"5\", \n        \"roomNum\": \"101\", \n        \"shelfNum\" : \"1\", \n        \"pNotes\" : \"Chair\"\n    }\n]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/donate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"donate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donatorAuth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/check/donator/meetoswal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"check",
+						"donator",
+						"meetoswal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SupervisorAuth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/check/supervisor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"check",
+						"supervisor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/orderhistory",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orderhistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CategoryFilter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/category?category=Books%26Clothing&sub_category=Men",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Books&Clothing"
+						},
+						{
+							"key": "sub_category",
+							"value": "Men"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/getcategory",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks_volunteer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tasks/volunteer/meetoswal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"volunteer",
+						"meetoswal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks_staff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/tasks/staff/meetoswal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"staff",
+						"meetoswal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPhone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "1234567890123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/phone/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"phone",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePhone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/phone/remove",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"phone",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientAuth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/check/client/meetoswal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"check",
+						"client",
+						"meetoswal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "meetoswal",
+							"type": "text"
+						},
+						{
+							"key": "orderNotes",
+							"value": "good luck",
+							"type": "text"
+						},
+						{
+							"key": "orderDate",
+							"value": "2024-11-16",
+							"type": "text"
+						},
+						{
+							"key": "deliveredBy",
+							"value": "meetoswal",
+							"type": "text"
+						},
+						{
+							"key": "deliveredDate",
+							"value": "2024-11-20",
+							"type": "text"
+						},
+						{
+							"key": "deliveredStatus",
+							"value": "Received",
+							"type": "text"
+						},
+						{
+							"key": "itemID",
+							"value": "2,3,4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/createorder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createorder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

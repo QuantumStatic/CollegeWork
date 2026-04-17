@@ -1,0 +1,52 @@
+/* Auth Button */
+.auth-button {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+/* Logout Button Alignment */
+/* Logout Button Styling */
+.logout-button {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    /* Complementary darker blue */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    /* Remove the grey outline */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #003f8a;
+    /* Slightly darker blue for hover */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.logout-button:active {
+    background-color: #002f63;
+    /* Even deeper blue for active state */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* Accessibility: Focus Outline */
+.logout-button:focus {
+    outline: 2px solid #80bfff;
+    /* Light blue focus ring */
+    outline-offset: 2px;
+}

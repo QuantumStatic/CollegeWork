@@ -1,0 +1,24 @@
+/* Home Button */
+.home-link {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1rem;
+    color: #fff;
+    /* White text for the button */
+    background-color: #007bff;
+    /* Blue background */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* Button-like padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #0056b3;
+    color: #fff;
+    /* Darker blue on hover */
+}

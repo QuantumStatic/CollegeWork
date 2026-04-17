@@ -1,0 +1,158 @@
+/* Navigation Bar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    /* Vertically centers items */
+    justify-content: space-between;
+    /* Spreads items evenly with space between */
+    background-color: #007bff;
+    color: white;
+    padding: 0 20px;
+    height: 60px;
+    /* Adjust as needed */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#page-title-get-order {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 1%;
+    color: white;
+}
+
+
+.back-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+/* Order Page Layout */
+.order-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* Client Info Section */
+.client-info-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.client-info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.order-info-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Items Section */
+.items-container {
+    flex: 1;
+}
+
+.items-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.item-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Pieces Section */
+.pieces-container {
+    margin-top: 10px;
+}
+
+.piece-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.separator {
+    margin: 10px 0;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Update Buttons */
+.update-button,
+.toggle-update-button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-button:hover,
+.toggle-update-button:hover {
+    background-color: #218838;
+}
+
+.status-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

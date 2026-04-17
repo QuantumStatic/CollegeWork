@@ -1,0 +1,110 @@
+/* Top bar adjustments */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px;
+    /* Increased padding for a taller bar */
+    color: white;
+    position: relative;
+    height: 45px;
+    /* Set a fixed height to make it taller */
+}
+
+#page-title {
+    font-size: 28px;
+    /* Slightly larger font for emphasis */
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Input container */
+.input-container {
+    position: absolute;
+    top: 80px;
+    /* Adjusted for the taller header */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.get-item-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-item-button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Item details container */
+.item-details-container {
+    position: absolute;
+    top: 160px;
+    left: 10%;
+    width: 40%;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Item image */
+.item-image {
+    position: absolute;
+    top: 160px;
+    right: 10%;
+    max-width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* General styles */
+.piece-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #fff;
+}
+
+.piece-number,
+.piece-description,
+.piece-location {
+    margin-bottom: 8px;
+}
+
+.piece-location div {
+    margin-left: 8px;
+}

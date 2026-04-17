@@ -1,0 +1,103 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Home link styling */
+.categories-home-link {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.categories-home-link:hover {
+    background-color: #0056b3;
+}
+
+/* Header styling */
+.categories-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Category container styling */
+.category-container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox and label styling for categories */
+.category-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.category-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Subcategory styling */
+.subcategory-container {
+    margin-top: 10px;
+    margin-left: 30px;
+    /* Indented for hierarchy */
+}
+
+.subcategory-checkbox {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+.subcategory-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Submit button styling */
+.categories-submit-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.categories-submit-button:hover {
+    background-color: #218838;
+}
+
+/* Error message styling */
+.categories-error {
+    color: #dc3545;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}

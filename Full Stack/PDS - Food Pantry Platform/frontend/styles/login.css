@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    /* Light grey background for consistency */
+}
+
+/* Top Bar */
+
+/* Page Title */
+.page-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Login Form Container */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.login-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    color: #cc0000;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: #0056b3;
+}
+
+/* Password Container */
+/* Password Container */
+.password-container {
+    position: relative;
+    /* Needed for absolute positioning of the icon */
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding-right: 45px;
+    /* Add space for the eye icon */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect the layout */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    /* Vertically center the icon */
+    right: 10px;
+    /* Add spacing from the input field */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    /* Adjust icon size for better alignment */
+    color: #007bff;
+    /* Match the blue theme */
+}
+
+.toggle-password:hover {
+    color: #0056b3;
+    /* Darker blue for hover effect */
+}

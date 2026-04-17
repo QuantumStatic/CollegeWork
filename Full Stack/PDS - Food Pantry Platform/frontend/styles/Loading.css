@@ -1,0 +1,127 @@
+/* LoadingAnimation.css */
+body {
+    background: #000;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: skyblue;
+    overflow: hidden;
+}
+
+.loading-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.loading-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.circle-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #00f5d4;
+    animation: spin 1s infinite linear;
+}
+
+.circle-1 {
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    animation-delay: 0.2s;
+}
+
+.circle-3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: flicker 1.5s infinite;
+}
+
+.text-glitch {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: darkslateblue;
+    letter-spacing: 2px;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    animation: glitch 1.5s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glitch {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-48%, -52%);
+    }
+}
