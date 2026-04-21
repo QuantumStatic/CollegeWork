@@ -1,0 +1,80 @@
+Please input the file pathname: d3.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Dickson
+Done.
+
+> hire|Emily
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Bill
+Done.
+
+> hire|Helen
+Done.
+
+> listEmployees
+Ada
+Angel
+Bill
+Brian
+Dickson
+Emily
+Helen
+
+> setupTeam|X Troop|Angel
+Done.
+
+> setupTeam|Spider Gang|Brian
+Done.
+
+> joinTeam|Dickson|X Troop
+Done.
+
+> joinTeam|Emily|Spider Gang
+Done.
+
+> joinTeam|Emily|Spider Gang
+Employee has joined a team already.
+
+> joinTeam|Emily|X Troop
+Employee has joined a team already.
+
+> joinTeam|Bill|Spider Troop
+Team does not exist.
+
+> joinTeam|Esther|Spider Gang
+Employee name does not exist.
+
+> joinTeam|Bill
+Insufficient command arguments.
+
+> joinTeam
+Insufficient command arguments.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill
+Brian (Spider Gang)
+Dickson (X Troop)
+Emily (Spider Gang)
+Helen
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Emily           
+X Troop        Angel     20-Feb-2020   Dickson             

@@ -1,0 +1,177 @@
+Please input the file pathname: g.txt
+
+> startNewDay|21-Feb-2020
+
+> hire|Aaron
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Angel
+Done.
+
+> hire|Amy
+Done.
+
+> hire|Barbara
+Done.
+
+> hire|Bob
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Cathy
+Done.
+
+> setupTeam|Spider Gang|Aaron
+Done.
+
+> setupTeam|Team 007|Barbara
+Done.
+
+> setupTeam|X Troop|Cathy
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> joinTeam|Angel|Spider Gang
+Done.
+
+> joinTeam|Amy|Spider Gang
+Done.
+
+> joinTeam|Bob|Team 007
+Done.
+
+> joinTeam|Brian|Team 007
+Done.
+
+> createProject|P001|10
+Done.
+
+> createProject|P002|10
+Done.
+
+> createProject|P003|10
+Done.
+
+> takeProject|Spider Gang|P001|25-Feb-2020
+Done.
+
+> takeProject|Team 007|P002|28-Feb-2020
+Done.
+
+> takeProject|X Troop|P003|10-Mar-2020
+Done.
+
+> listEmployees
+Aaron (Spider Gang)
+Ada (Spider Gang)
+Amy (Spider Gang)
+Angel (Spider Gang)
+Barbara (Team 007)
+Bob (Team 007)
+Brian (Team 007)
+Cathy (X Troop)
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Aaron     21-Feb-2020   Ada Amy Angel       
+Team 007       Barbara   21-Feb-2020   Bob Brian           
+X Troop        Cathy     21-Feb-2020   (no member)         
+
+> lisProjects
+
+> createProject|P004|20
+Done.
+
+> createProject|P005|13
+Done.
+
+> createProject|P006|11
+Done.
+
+> createProject|P007|9
+Done.
+
+> createProject|P008|1
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     10 man-days   Spider Gang  25-Feb-2020  27-Feb-2020  
+P002     10 man-days   Team 007     28-Feb-2020  2-Mar-2020   
+P003     10 man-days   X Troop      10-Mar-2020  19-Mar-2020  
+P004     20 man-days   (Not Assigned)                          
+P005     13 man-days   (Not Assigned)                          
+P006     11 man-days   (Not Assigned)                          
+P007     9 man-days    (Not Assigned)                          
+P008     1 man-days    (Not Assigned)                          
+
+> suggestTeam|P004
+Spider Gang (Work period: 28-Feb-2020 to 3-Mar-2020)
+
+> suggestTeam|P005
+Team 007 (Work period: 22-Feb-2020 to 26-Feb-2020)
+
+> suggestTeam|P006
+Spider Gang (Work period: 22-Feb-2020 to 24-Feb-2020)
+
+> suggestTeam|P007
+Spider Gang (Work period: 22-Feb-2020 to 24-Feb-2020)
+Team 007 (Work period: 22-Feb-2020 to 24-Feb-2020)
+
+> suggestTeam|P008
+Spider Gang (Work period: 22-Feb-2020 to 22-Feb-2020)
+Team 007 (Work period: 22-Feb-2020 to 22-Feb-2020)
+X Troop (Work period: 22-Feb-2020 to 22-Feb-2020)
+
+> takeProject|Spider Gang|P004|5-Mar-2020
+Done.
+
+> takeProject|Team 007|P005|22-Feb-2020
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     10 man-days   Spider Gang  25-Feb-2020  27-Feb-2020  
+P002     10 man-days   Team 007     28-Feb-2020  2-Mar-2020   
+P003     10 man-days   X Troop      10-Mar-2020  19-Mar-2020  
+P004     20 man-days   Spider Gang  5-Mar-2020   9-Mar-2020   
+P005     13 man-days   Team 007     22-Feb-2020  26-Feb-2020  
+P006     11 man-days   (Not Assigned)                          
+P007     9 man-days    (Not Assigned)                          
+P008     1 man-days    (Not Assigned)                          
+
+> startNewDay|24-Feb-2020
+Done.
+
+> createProject|P009|30
+Done.
+
+> createProject|P010|2
+Done.
+
+> createProject|P011|5
+Done.
+
+> suggestTeam|P009
+Team 007 (Work period: 3-Mar-2020 to 12-Mar-2020)
+
+> suggestTeam|P010
+X Troop (Work period: 25-Feb-2020 to 26-Feb-2020)
+
+> suggestTeam|P011
+Spider Gang (Work period: 28-Feb-2020 to 29-Feb-2020)
+X Troop (Work period: 25-Feb-2020 to 29-Feb-2020)
+
+> startNewDay|25-Feb-2020
+Done.
+
+> suggestTeam|P010
+Team 007 (Work period: 27-Feb-2020 to 27-Feb-2020)
+X Troop (Work period: 26-Feb-2020 to 27-Feb-2020)

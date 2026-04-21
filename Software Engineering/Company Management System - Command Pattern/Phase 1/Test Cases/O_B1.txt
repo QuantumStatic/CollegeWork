@@ -1,0 +1,28 @@
+Please input the file pathname: b1.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> listEmployees
+Angel
+Brian
+
+> setupTeam|X Troop|Angel
+Done.
+
+> startNewDay|31-Mar-2020
+Done.
+
+> setupTeam|Team 007|Brian
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Team 007       Brian     31-Mar-2020   (no member)         
+X Troop        Angel     20-Feb-2020   (no member)         
+    

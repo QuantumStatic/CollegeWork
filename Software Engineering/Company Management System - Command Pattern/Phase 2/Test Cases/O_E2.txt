@@ -1,0 +1,175 @@
+Please input the file pathname: e2.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Carol
+Done.
+
+> hire|Dickson
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Bill
+Done.
+
+> hire|Helen
+Done.
+
+> listEmployees
+Ada
+Angel
+Bill
+Brian
+Carol
+Dickson
+Helen
+
+> setupTeam|X Troop|Angel
+Done.
+
+> setupTeam|Spider Gang|Brian
+Done.
+
+> setupTeam|Team 007|Bill
+Done.
+
+> joinTeam|Dickson|X Troop
+Done.
+
+> joinTeam|Carol|Spider Gang
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> changeTeam|Carol|X Troop
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada                 
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Carol Dickson       
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (X Troop)
+Dickson (X Troop)
+Helen
+
+> changeTeam|Carol|Spider Gang
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Carol           
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (Spider Gang)
+Dickson (X Troop)
+Helen
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada                 
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Carol Dickson       
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (X Troop)
+Dickson (X Troop)
+Helen
+
+> undo
+
+> undo
+
+> undo
+
+> undo
+
+> undo
+
+> undo
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+
+> redo
+
+> redo
+
+> redo
+
+> redo
+
+> redo
+
+> redo
+
+> redo
+
+> redo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Carol           
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada                 
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Carol Dickson       
+
+> changeTeam|Dickson|Spider Gang
+Done.
+
+> changeTeam|Carol|Team 007
+Done.
+
+> redo
+Nothing to redo.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Dickson         
+Team 007       Bill      20-Feb-2020   Carol               
+X Troop        Angel     20-Feb-2020   (no member)         
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (Team 007)
+Dickson (Spider Gang)
+Helen

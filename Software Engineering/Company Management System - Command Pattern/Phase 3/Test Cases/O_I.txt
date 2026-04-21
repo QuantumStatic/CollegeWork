@@ -1,0 +1,142 @@
+Please input the file pathname: i.txt
+
+> startNewDay|21-Feb-2020
+
+> hire|Aaron
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Angel
+Done.
+
+> hire|Amy
+Done.
+
+> hire|Barbara
+Done.
+
+> hire|Bob
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Cathy
+Done.
+
+> setupTeam|Spider Gang|Aaron
+Done.
+
+> setupTeam|Team 007|Barbara
+Done.
+
+> setupTeam|X Troop|Cathy
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> joinTeam|Angel|Spider Gang
+Done.
+
+> joinTeam|Amy|Spider Gang
+Done.
+
+> joinTeam|Bob|Team 007
+Done.
+
+> joinTeam|Brian|Team 007
+Done.
+
+> createProject|P001|10
+Done.
+
+> createProject|P002|10
+Done.
+
+> createProject|P003|10
+Done.
+
+> takeProject|Spider Gang|P001|25-Feb-2020
+Done.
+
+> takeProject|Team 007|P002|28-Feb-2020
+Done.
+
+> takeProject|X Troop|P003|10-Mar-2020
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Aaron     21-Feb-2020   Ada Amy Angel       
+Team 007       Barbara   21-Feb-2020   Bob Brian           
+X Troop        Cathy     21-Feb-2020   (no member)         
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     10 man-days   Spider Gang  25-Feb-2020  27-Feb-2020  
+P002     10 man-days   Team 007     28-Feb-2020  2-Mar-2020   
+P003     10 man-days   X Troop      10-Mar-2020  19-Mar-2020  
+
+> startNewDay|26-Feb-2020
+Done.
+
+> changeTeam|Angel|Team 007
+Done.
+
+> startNewDay|27-Feb-2020
+Done.
+
+> changeTeam|Bob|Spider Gang
+Done.
+
+> startNewDay|12-Mar-2020
+Done.
+
+> changeTeam|Bob|X Troop
+Done.
+
+> showEmployeeDetails|Aaron
+The teams that Aaron has joined: 
+Spider Gang (21-Feb-2020 to --), as a leader
+
+> showEmployeeDetails|Angel
+The teams that Angel has joined: 
+Spider Gang (21-Feb-2020 to 25-Feb-2020)
+Team 007 (26-Feb-2020 to --)
+
+> showEmployeeDetails|Bob
+The teams that Bob has joined: 
+Team 007 (21-Feb-2020 to 26-Feb-2020)
+Spider Gang (27-Feb-2020 to 11-Mar-2020)
+X Troop (12-Mar-2020 to --)
+
+> showProjectWorkerDetails|P001
+Est manpower : 10 man-days
+Team         : Spider Gang (Leader is Aaron)
+Work period  : 25-Feb-2020 to 27-Feb-2020
+
+Members: 
+  Ada (25-Feb-2020 to 27-Feb-2020) 
+  Amy (25-Feb-2020 to 27-Feb-2020) 
+  Angel (25-Feb-2020 to 25-Feb-2020) 
+  Bob (27-Feb-2020 to 27-Feb-2020) 
+
+> showProjectWorkerDetails|P002
+Est manpower : 10 man-days
+Team         : Team 007 (Leader is Barbara)
+Work period  : 28-Feb-2020 to 2-Mar-2020
+
+Members: 
+  Angel (28-Feb-2020 to 2-Mar-2020) 
+  Brian (28-Feb-2020 to 2-Mar-2020) 
+
+> showProjectWorkerDetails|P003
+Est manpower : 10 man-days
+Team         : X Troop (Leader is Cathy)
+Work period  : 10-Mar-2020 to 19-Mar-2020
+
+Members: 
+  Bob (12-Mar-2020 to 19-Mar-2020) 

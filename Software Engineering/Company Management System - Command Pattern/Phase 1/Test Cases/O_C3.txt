@@ -1,0 +1,48 @@
+Please input the file pathname: c3.txt
+
+> startNewDay|20-Feb-2020
+
+> createProject|P001|5
+Done.
+
+> createProject|P001|5
+Project code already exists.
+
+> createProject|P002|ten
+Wrong number format -- Please enter an integer.
+
+> createProject|P002|1.5
+Wrong number format -- Please enter an integer.
+
+> createProject|P002
+Insufficient command arguments.
+
+> createProject|P002|0
+Estimated manpower should not be zero or negative.
+Consider changing 0 to a positive non-zero amount.
+
+> createProject|P002|-10
+Estimated manpower should not be zero or negative.
+Consider changing -10 to a positive non-zero amount.
+
+> createProject|P002|10
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     5 man-days    (Not Assigned)                          
+P002     10 man-days   (Not Assigned)                          
+
+> createProject|P903|30
+Done.
+
+> createProject|P004|40
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     5 man-days    (Not Assigned)                          
+P002     10 man-days   (Not Assigned)                          
+P004     40 man-days   (Not Assigned)                          
+P903     30 man-days   (Not Assigned)                          
+                       

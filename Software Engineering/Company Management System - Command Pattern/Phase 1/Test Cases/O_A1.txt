@@ -1,0 +1,20 @@
+Please input the file pathname: a1.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Cathy
+Done.
+
+> listEmployees
+Cathy
+
+> hire|Angel
+Done.
+
+> hire|Bob
+Done.
+
+> listEmployees
+Angel
+Bob
+Cathy

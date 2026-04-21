@@ -1,0 +1,167 @@
+Please input the file pathname: f1.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Carol
+Done.
+
+> hire|Dickson
+Done.
+
+> hire|Emily
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Bill
+Done.
+
+> hire|Helen
+Done.
+
+> setupTeam|X Troop|Angel
+Done.
+
+> setupTeam|Spider Gang|Brian
+Done.
+
+> setupTeam|Team 007|Carol
+Done.
+
+> joinTeam|Dickson|X Troop
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> joinTeam|Emily|Spider Gang
+Done.
+
+> joinTeam|Bill|Team 007
+Done.
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (Team 007)
+Dickson (X Troop)
+Emily (Spider Gang)
+Helen
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Emily           
+Team 007       Carol     20-Feb-2020   Bill                
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> createProject|P001|7
+Done.
+
+> createProject|P002|10
+Done.
+
+> createProject|P003|10
+Done.
+
+> takeProject|Spider Gang|P001|28-Feb-2020
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     7 man-days    Spider Gang  28-Feb-2020  1-Mar-2020   
+P002     10 man-days   (Not Assigned)                          
+P003     10 man-days   (Not Assigned)                          
+
+> takeProject|X Troop|P002|21-Feb-2020
+Done.
+
+> changeTeam|Dickson|Spider Gang
+Done.
+
+> takeProject|X Troop|P003|28-Feb-2020
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     7 man-days    Spider Gang  28-Feb-2020  1-Mar-2020   
+P002     10 man-days   X Troop      21-Feb-2020  25-Feb-2020  
+P003     10 man-days   X Troop      28-Feb-2020  8-Mar-2020   
+
+> createProject|P004|2
+Done.
+
+> createProject|P005|2
+Done.
+
+> createProject|P006|2
+Done.
+
+> createProject|P007|5
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     7 man-days    Spider Gang  28-Feb-2020  1-Mar-2020   
+P002     10 man-days   X Troop      21-Feb-2020  25-Feb-2020  
+P003     10 man-days   X Troop      28-Feb-2020  8-Mar-2020   
+P004     2 man-days    (Not Assigned)                          
+P005     2 man-days    (Not Assigned)                          
+P006     2 man-days    (Not Assigned)                          
+P007     5 man-days    (Not Assigned)                          
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (Team 007)
+Dickson (Spider Gang)
+Emily (Spider Gang)
+Helen
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Dickson Emily   
+Team 007       Carol     20-Feb-2020   Bill                
+X Troop        Angel     20-Feb-2020   (no member)         
+
+> startNewDay|24-Feb-2020
+Done.
+
+> takeProject|Team 007|P004|25-Feb-2020
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     7 man-days    Spider Gang  28-Feb-2020  1-Mar-2020   
+P002     10 man-days   X Troop      21-Feb-2020  25-Feb-2020  
+P003     10 man-days   X Troop      28-Feb-2020  8-Mar-2020   
+P004     2 man-days    Team 007     25-Feb-2020  25-Feb-2020  
+P005     2 man-days    (Not Assigned)                          
+P006     2 man-days    (Not Assigned)                          
+P007     5 man-days    (Not Assigned)                          
+
+> takeProject|X Troop|P005|26-Feb-2020
+Done.
+
+> takeProject|Spider Gang|P007|26-May-2020
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     7 man-days    Spider Gang  28-Feb-2020  1-Mar-2020   
+P002     10 man-days   X Troop      21-Feb-2020  25-Feb-2020  
+P003     10 man-days   X Troop      28-Feb-2020  8-Mar-2020   
+P004     2 man-days    Team 007     25-Feb-2020  25-Feb-2020  
+P005     2 man-days    X Troop      26-Feb-2020  27-Feb-2020  
+P006     2 man-days    (Not Assigned)                          
+P007     5 man-days    Spider Gang  26-May-2020  27-May-2020  

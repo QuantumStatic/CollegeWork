@@ -1,0 +1,120 @@
+Please input the file pathname: e3.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Carol
+Done.
+
+> hire|Dickson
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Bill
+Done.
+
+> hire|Helen
+Done.
+
+> listEmployees
+Ada
+Angel
+Bill
+Brian
+Carol
+Dickson
+Helen
+
+> setupTeam|X Troop|Angel
+Done.
+
+> setupTeam|Spider Gang|Brian
+Done.
+
+> setupTeam|Team 007|Bill
+Done.
+
+> joinTeam|Dickson|X Troop
+Done.
+
+> joinTeam|Carol|Spider Gang
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> changeTeam|Carol|X Troop
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada                 
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Carol Dickson       
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (X Troop)
+Dickson (X Troop)
+Helen
+
+> changeTeam|Carol|X Troop
+The old and new teams should not be the same.
+
+> changeTeam|Carol
+Insufficient command arguments.
+
+> changeTeam
+Insufficient command arguments.
+
+> changeTeam|Carol|Spider Troop
+Team does not exist.
+
+> changeTeam|Esther|Spider Gang
+Employee name does not exist.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada                 
+Team 007       Bill      20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Carol Dickson       
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (X Troop)
+Dickson (X Troop)
+Helen
+
+> changeTeam|Dickson|Spider Gang
+Done.
+
+> changeTeam|Carol|Team 007
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Dickson         
+Team 007       Bill      20-Feb-2020   Carol               
+X Troop        Angel     20-Feb-2020   (no member)         
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill (Team 007)
+Brian (Spider Gang)
+Carol (Team 007)
+Dickson (Spider Gang)
+Helen

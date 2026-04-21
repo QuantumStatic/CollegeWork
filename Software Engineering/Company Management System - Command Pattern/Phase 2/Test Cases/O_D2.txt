@@ -1,0 +1,103 @@
+Please input the file pathname: d2.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Brian
+Done.
+
+> hire|Dickson
+Done.
+
+> hire|Emily
+Done.
+
+> hire|Ada
+Done.
+
+> hire|Bill
+Done.
+
+> hire|Helen
+Done.
+
+> listEmployees
+Ada
+Angel
+Bill
+Brian
+Dickson
+Emily
+Helen
+
+> setupTeam|X Troop|Angel
+Done.
+
+> setupTeam|Spider Gang|Brian
+Done.
+
+> joinTeam|Dickson|X Troop
+Done.
+
+> joinTeam|Emily|Spider Gang
+Done.
+
+> joinTeam|Ada|Spider Gang
+Done.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Emily           
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> listEmployees
+Ada (Spider Gang)
+Angel (X Troop)
+Bill
+Brian (Spider Gang)
+Dickson (X Troop)
+Emily (Spider Gang)
+Helen
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Emily               
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   (no member)         
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> redo
+
+> redo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Ada Emily           
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> undo
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Emily               
+X Troop        Angel     20-Feb-2020   Dickson             
+
+> joinTeam|Ada|X Troop
+Done.
+
+> redo
+Nothing to redo.
+
+> listTeams
+Team Name      Leader    Setup Date    Members             
+Spider Gang    Brian     20-Feb-2020   Emily               
+X Troop        Angel     20-Feb-2020   Ada Dickson         

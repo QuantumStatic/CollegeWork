@@ -1,0 +1,19 @@
+Please input the file pathname: a3.txt
+
+> startNewDay|20-Feb-2020
+
+> hire|Angel
+Done.
+
+> hire|Angel
+Employee name already exists.
+
+> hire
+Insufficient command arguments.
+
+> hire|Bob
+Done.
+
+> listEmployees
+Angel
+Bob

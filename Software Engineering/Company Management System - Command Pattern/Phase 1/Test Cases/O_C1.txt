@@ -1,0 +1,22 @@
+Please input the file pathname: c1.txt
+
+> startNewDay|20-Feb-2020
+
+> createProject|P001|5
+Done.
+
+> createProject|P002|10
+Done.
+
+> createProject|P903|30
+Done.
+
+> createProject|P004|40
+Done.
+
+> listProjects
+Project  Est manpower  Team         Start Day    End Day      
+P001     5 man-days    (Not Assigned)                          
+P002     10 man-days   (Not Assigned)                          
+P004     40 man-days   (Not Assigned)                          
+P903     30 man-days   (Not Assigned)                          
