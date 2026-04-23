@@ -1,0 +1,19 @@
+version: "3.0.1"
+services:
+  flask:
+    build: ./flask
+    image: flask_image
+    container_name: flask_container
+    ports:
+      - "8000:5000"
+    volumes:
+      - ./flask:/app
+    depends_on:
+      - db
+    environment:
+      - MONGO_HOST=db
+      - MONGO_PORT=27017
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"

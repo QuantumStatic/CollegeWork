@@ -1,0 +1,64 @@
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:Publish",
+        "SNS:RemovePermission",
+        "SNS:SetTopicAttributes",
+        "SNS:DeleteTopic",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:GetTopicAttributes",
+        "SNS:AddPermission",
+        "SNS:Subscribe"
+      ],
+      "Resource": "arn:aws:sns:us-east-1:683041620920:k8-alerts",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "683041620920"
+        }
+      }
+    },
+    {
+      "Sid": "__console_pub_0",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:us-east-1:683041620920:k8-alerts"
+    },
+    {
+      "Sid": "__console_sub_0",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SNS:Subscribe",
+      "Resource": "arn:aws:sns:us-east-1:683041620920:k8-alerts"
+    },
+    {
+      "Sid": "Allow_Publish_Alarms",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "aps.amazonaws.com"
+      },
+      "Action": ["sns:Publish", "sns:GetTopicAttributes"],
+      "Resource": "arn:aws:sns:us-east-1:683041620920:k8-alerts",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceAccount": "683041620920"
+        },
+        "ArnEquals": {
+          "aws:SourceArn": "arn:aws:aps:us-east-1:683041620920:workspace/ws-d99d59af-640d-4c2e-885b-fa7df32e147c"
+        }
+      }
+    }
+  ]
+}

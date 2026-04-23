@@ -1,0 +1,10 @@
+alertmanager_config: |
+  route:
+    receiver: "sns"
+  receivers:
+    - name: "sns"
+      sns_configs:
+      - topic_arn: "arn:aws:sns:us-east-1:683041620920:k8-alerts"
+        sigv4:
+          region: us-east-1
+        subject: "project alert"

@@ -1,0 +1,15 @@
+groups:
+  - name: prometheus-namespace
+    rules:
+      - alert: InsufficientReplicas
+        expr: |
+          scalar (
+          kube_deployment_status_replicas_available{
+          deployment="flask-deployment"
+          }) == bool 0
+        for: 2s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Pods failed"
+          description: "No pods are available for deployment"
