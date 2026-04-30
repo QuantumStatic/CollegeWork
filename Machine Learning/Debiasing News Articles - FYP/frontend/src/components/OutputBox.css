@@ -1,0 +1,22 @@
+#ouputAreaContainer {
+    width: 60%;
+    padding:0.4%;
+}
+
+#ouputAreaContainerMobile {
+    width: 90%;
+    padding: 2.5%;
+}
+
+#outputTextBox {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000;
+    padding-bottom: 1px;
+}
+
+
+
+

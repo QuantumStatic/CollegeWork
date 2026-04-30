@@ -1,0 +1,47 @@
+#myAppBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    height: 0.4px;
+    color: black;
+    background-color: black;
+}
+
+fieldset {
+    border: thin solid black;
+    /* color tag changed text colour only do it using legend instead*/
+    border-radius: 8px;
+    resize: vertical;
+    padding: 0.5%;
+}
+
+legend {
+    padding:0px 3px;
+    text-transform: capitalize; 
+    resize: inherit;
+}
+
+
+.MyFieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    resize: vertical;
+    background-color:blanchedalmond;
+}
+
+#ArrowPointer {
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+}
+
+#ArrowPointerMobile {
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}

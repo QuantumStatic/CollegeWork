@@ -1,0 +1,82 @@
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100 vh;
+}
+  
+.arrow {
+    position: relative;
+    width: 10px;
+    height: 100px;
+    border: 2px solid #000;
+}
+  
+.arrow-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 33.33%;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+  
+.arrow-middle {
+    position: absolute;
+    top: 33.33%;
+    left: 0;
+    right: 0;
+    height: 33.33%;
+    background-color: transparent;
+    transition: background-color 0.5s ease 0.4s;
+}
+  
+.arrow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33.33%;
+    background-color: transparent;
+    transition: background-color 0.5s ease 0.8s;
+}
+  
+.arrow.filled .arrow-top {
+    background-color: #000;
+}
+  
+.arrow.filled .arrow-middle {
+    background-color: #000;
+}
+  
+.arrow.filled .arrow-bottom {
+    background-color: #000;
+}
+
+@keyframes top-fill {
+    from {
+        height: 0;
+    }
+    to {
+        height: 33.33%;
+    }
+}
+  
+@keyframes middle-fill {
+    from {
+        height: 0;
+    }
+    to {
+        height: 33.33%;
+    }
+}
+  
+@keyframes bottom-fill {
+    from {
+        height: 0;
+    }
+    to {
+        height: 33.33%;
+    }
+}
